@@ -38,20 +38,35 @@
 	<!--[if IE]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<script>
-function myFunction() {
-    var x;
-    if (confirm("subham2mallick@gmail.com") == true) {
-        x = "";
-    } else {
-        x = "";
-    }
-    
+	
+<script language="Javascript">
+
+
+function hideA()
+
+
+{
+
+    document.getElementById("A").style.visibility="hidden";
+
+    document.getElementById("B").style.visibility="visible";    
+
 }
+
+
+
+function hideB()
+{
+    document.getElementById("B").style.visibility="hidden";
+    document.getElementById("A").style.visibility="visible";
+
+}
+
+
 </script>
 </head>
 <body>
-	<div id="container">
+	<div id="container">  
 		<header>
 			<h1>Airline Reservation System</h1>
 			<p class="description">Simple and Clear</p>
@@ -59,10 +74,15 @@ function myFunction() {
 		<div id="wrapper">
 			<section id="content">
 				<h2>Flight Avalability</h2>
-				<form method="POST" action="phpproject_trainavalibility.php">
+				<form method="POST" action="phpproject_flightavalibility.php">
 				<table>
-					<tr><td><input type="radio" name="r1" id="radio1"/>One Way</td>
-						<td><input type="radio" name="r1" id="radio2" onChange="findselected()"/>Round Way</td>
+					<tr><td><input type="radio" name="r1" value="radio1" onclick="hideB()"/>One Way</td>
+						<td><input type="radio" name="r1" value="radio2" onclick="hideA()"/>Round Way</td></tr>
+					</table>
+
+
+					 <div style="position: absolute;visibility:hidden" id="A">
+					 	<table>
 					   <tr>
 					   	   <td>Source</td>
 						   <td><input list="ts" name="b1" placeholder="Source">
@@ -104,33 +124,95 @@ function myFunction() {
 						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Economy Saver</td></tr>
 						   
 					   </tr>
+					</table>
+					</div>
+
+
+
+
+					<div style="position: absolute;visibility:hidden" id="B">
+
+							 	<table>
+					   <tr>
+					   	   <td>Source</td>
+						   <td><input list="ts" name="b1" placeholder="Source">
+						   <datalist id="ts">
+						   			 <option value="Delhi(DEL)"></option>
+									 
+									 
+							</datalist>
+						   </td>
+					   </tr>
+					   <tr>
+					   	   <td>Destination</td>
+						   <td><input list="td" name="b2" placeholder="Destination"/>
+						   <datalist id="td">
+						   			 <option value="Amritsar(ATQ)"></option>
+									 <option value="Chennai(MAA)"></option>
+									 <option value="Varanasi(VNS)"></option>
+									 <option value="Kolkata(CCU)"></option>
+									 <option value="Bengaluru(BLR)"></option>
+									 <option value="Coimbatore(CJB)"></option>
+									 <option value="Mumbai(BOM)"></option>
+									 <option value="Bangkok(BKK)"></option>
+									 <option value="Dhaka(DAC)"></option>
+									 <option value="Los Angeles(LAX)"></option>
+							</datalist>
+						   </td>
+					   </tr>
+					   <tr>
+					   	<td>Date</td>
+					   	<td><input type="date" id="d1"></td></tr>
+					   		<tr><td>Return Date</td>
+					   	<td><input type="date" id="d2"></td>
+					   </tr>
+					   <tr>
+					   	   <td>Class</td></tr>
+						   <tr><td>&nbsp</td><td><input type="radio" name="b3" />First Class</td></tr>
+						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Premiere Flex</td></tr>
+						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Premiere Classic</td></tr>
+						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Economy Flex</td></tr>
+						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Economy Classic</td></tr>
+						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Economy Saver</td></tr>
+						   
+					   </tr>
+					</table>
+
+				
+
+
+
+
+
+					</div>
+					 <table style="margin-top:280px"> 
+					   <!-- <tr> 
+					   	   <td>Class</td></tr>
+						   <tr><td>&nbsp</td><td><input type="radio" name="b3" />First Class</td></tr>
+						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Premiere Flex</td></tr>
+						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Premiere Classic</td></tr>
+						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Economy Flex</td></tr>
+						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Economy Classic</td></tr>
+						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Economy Saver</td></tr>
+						   
+					   </tr>-->
 					   <tr>
 					   	   <td></td>
-						   <td><button>Submit</button><input type="reset" /></td>
+						   <td><button>Submit</button><input type="reset" /><button>LogOut</button></td>
 					   </tr>
 				</table>
 				
 				</form>
-			</section>
+			</section> 
 		</div>
-		<footer>
+		<footer >
+
 			<ul>
-				<li><a onclick="myFunction()">Click for Contact Us</a></li>
+				<li><a onclick="myFunction()">Click to Contact Us</a></li>
 			</ul>
 			<p>&copy;Shubham Srivastava</p>
 		</footer>
 	</div>
-	<script type="text/javascript">
-	function findselected(){
-		var result=document.querySelector('input[name="r1"]:checked').value;
-		 if(result=="Yes"){
 
-        document.getElementById("radio1").setAttribute('disabled', true);
-    }
-    else{
-        document.getElementById("radio2").removeAttribute('disabled');
-    }
-	}
-	</script>
 </body>
 </html>

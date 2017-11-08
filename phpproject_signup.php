@@ -16,7 +16,7 @@ $result=mysqli_query($conn,$sql);
 
 if($result)
 {
-	header('location:Train Avalability.html');
+	header('location:Homepage.html');
 }
 else 
 {

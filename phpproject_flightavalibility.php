@@ -10,7 +10,7 @@ echo "<br>";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
-        header('location:train reservation.html');
+        header('location:flight reservation.html');
     
 }
 

@@ -13,7 +13,7 @@ $result=mysqli_query($conn,$sql);
 
 if(mysqli_num_rows($result) > 0)
 {
-	header('location:Train Avalability.html');
+	header('location:Flight Avalability.html');
 }
 else 
 {
