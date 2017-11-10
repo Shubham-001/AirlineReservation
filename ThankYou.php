@@ -1,3 +1,11 @@
+<?php
+
+include 'checkLogin.php';
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,7 +57,9 @@
 		<div id="wrapper">
 			<section id="content">
 				<h1><center>Thank You , <br>You will soon get a conformation sms in your cell.</center></h1>
-				
+				<center><table>
+					<tr><td><a href="logout.php"><button>LogOut</button></a></td></tr>
+				</table></center>
 			</section>
 		</div>
 		

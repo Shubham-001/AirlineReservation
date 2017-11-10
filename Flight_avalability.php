@@ -1,3 +1,12 @@
+<?php
+
+include 'checkLogin.php';
+
+?>
+
+
+
+
 <html>
 <head>
 	<meta charset="utf-8">
@@ -47,9 +56,10 @@ function hideA()
 
 {
 
-    document.getElementById("A").style.visibility="hidden";
+	 document.getElementById("B").style.visibility="visible";
+    document.getElementById("A").style.visibility="visible";
 
-    document.getElementById("B").style.visibility="visible";    
+       
 
 }
 
@@ -74,20 +84,23 @@ function hideB()
 		<div id="wrapper">
 			<section id="content">
 				<h2>Flight Avalability</h2>
-				<form method="POST" action="phpproject_flightavalibility.php">
+				
+
+
+				<form method="post" action="book.php">
 				<table>
-					<tr><td><input type="radio" name="r1" value="radio1" onclick="hideB()"/>One Way</td>
+					<tr><td><input type="radio" name="r1" value="radio1" checked="true" onclick="hideB()" />One Way</td>
 						<td><input type="radio" name="r1" value="radio2" onclick="hideA()"/>Round Way</td></tr>
 					</table>
 
 
-					 <div style="position: absolute;visibility:hidden" id="A">
+					 <div style="position: absolute;visibility:visible" id="A">
 					 	<table>
 					   <tr>
 					   	   <td>Source</td>
 						   <td><input list="ts" name="b1" placeholder="Source">
 						   <datalist id="ts">
-						   			 <option value="Delhi(DEL)"></option>
+						   			 <option value="Delhi"></option>
 									 
 									 
 							</datalist>
@@ -97,22 +110,22 @@ function hideB()
 					   	   <td>Destination</td>
 						   <td><input list="td" name="b2" placeholder="Destination"/>
 						   <datalist id="td">
-						   			 <option value="Amritsar(ATQ)"></option>
-									 <option value="Chennai(MAA)"></option>
-									 <option value="Varanasi(VNS)"></option>
-									 <option value="Kolkata(CCU)"></option>
-									 <option value="Bengaluru(BLR)"></option>
-									 <option value="Coimbatore(CJB)"></option>
-									 <option value="Mumbai(BOM)"></option>
-									 <option value="Bangkok(BKK)"></option>
-									 <option value="Dhaka(DAC)"></option>
-									 <option value="Los Angeles(LAX)"></option>
+						   			 <option value="Amritsar"></option>
+								
+									 <option value="Varanasi"></option>
+									
+									 <option value="Bengaluru"></option>
+									 
+									 <option value="Mumbai"></option>
+									
+									 
+									 <option value="Los Angeles"></option>
 							</datalist>
 						   </td>
 					   </tr>
 					   <tr>
 					   	<td>Date</td>
-					   	<td><input type="date" id="d1"></td>
+					   	<td><input type="date" id="d1" name="d1"></td>
 					   </tr>
 					   <tr>
 					   	   <td>Class</td></tr>
@@ -124,85 +137,29 @@ function hideB()
 						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Economy Saver</td></tr>
 						   
 					   </tr>
+
+					   <tr style="position: absolute;visibility:hidden;margin-top:-250px;margin-left:300px;" id="B"><td>Return Date</td>
+					   	<td><input type="date" id="d2" name="d2"></td>
+					   </tr>
+
+
 					</table>
 					</div>
 
 
 
 
-					<div style="position: absolute;visibility:hidden" id="B">
-
-							 	<table>
-					   <tr>
-					   	   <td>Source</td>
-						   <td><input list="ts" name="b1" placeholder="Source">
-						   <datalist id="ts">
-						   			 <option value="Delhi(DEL)"></option>
-									 
-									 
-							</datalist>
-						   </td>
-					   </tr>
-					   <tr>
-					   	   <td>Destination</td>
-						   <td><input list="td" name="b2" placeholder="Destination"/>
-						   <datalist id="td">
-						   			 <option value="Amritsar(ATQ)"></option>
-									 <option value="Chennai(MAA)"></option>
-									 <option value="Varanasi(VNS)"></option>
-									 <option value="Kolkata(CCU)"></option>
-									 <option value="Bengaluru(BLR)"></option>
-									 <option value="Coimbatore(CJB)"></option>
-									 <option value="Mumbai(BOM)"></option>
-									 <option value="Bangkok(BKK)"></option>
-									 <option value="Dhaka(DAC)"></option>
-									 <option value="Los Angeles(LAX)"></option>
-							</datalist>
-						   </td>
-					   </tr>
-					   <tr>
-					   	<td>Date</td>
-					   	<td><input type="date" id="d1"></td></tr>
-					   		<tr><td>Return Date</td>
-					   	<td><input type="date" id="d2"></td>
-					   </tr>
-					   <tr>
-					   	   <td>Class</td></tr>
-						   <tr><td>&nbsp</td><td><input type="radio" name="b3" />First Class</td></tr>
-						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Premiere Flex</td></tr>
-						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Premiere Classic</td></tr>
-						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Economy Flex</td></tr>
-						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Economy Classic</td></tr>
-						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Economy Saver</td></tr>
-						   
-					   </tr>
-					</table>
-
-				
-
-
-
-
-
-					</div>
 					 <table style="margin-top:280px"> 
-					   <!-- <tr> 
-					   	   <td>Class</td></tr>
-						   <tr><td>&nbsp</td><td><input type="radio" name="b3" />First Class</td></tr>
-						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Premiere Flex</td></tr>
-						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Premiere Classic</td></tr>
-						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Economy Flex</td></tr>
-						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Economy Classic</td></tr>
-						   <tr><td>&nbsp</td><td><input type="radio" name="b3"/>Economy Saver</td></tr>
-						   
-					   </tr>-->
 					   <tr>
 					   	   <td></td>
-						   <td><button>Submit</button><input type="reset" /><button>LogOut</button></td>
+						   <td><button>Submit</button><input type="reset" /></td>
 					   </tr>
-				</table>
-				
+				</table>				
 				</form>
+
+
+
+
 			</section> 
 		</div>
 		<footer >

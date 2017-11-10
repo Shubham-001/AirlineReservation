@@ -1,8 +1,13 @@
+<?php
+include 'checkLogin.php';
+?>
+
+
 <html>
 <head>
 	<meta charset="utf-8">
     <meta name="Description" content="PhP ProJect">
-	<title>Airline RS | Sign Up</title>
+	<title>Airline RS | Reservation</title>
 	<style type="text/css" media="screen">
 		html, body, div, header, footer, aside, nav, article, section	{ margin: 0; padding: 0; }
 		header, footer, aside, nav, article, section	{ display: block; }
@@ -41,11 +46,12 @@
 	<script>
 function myFunction() {
     var x;
-    if (confirm("shubhamsrv95@gmail.com") == true) {
+    if (confirm("subham2mallick@gmail.com") == true) {
         x = "";
     } else {
         x = "";
     }
+    
 }
 </script>
 </head>
@@ -57,27 +63,61 @@ function myFunction() {
 		</header>
 		<div id="wrapper">
 			<section id="content">
-				<h2>Sign Up</h2>
-				<form method="POST" action="phpproject_signup.php">
+				<h2>Final Booking</h2>
+				<form method="POST" action="ThankYou.php">
 				<table>
 					   <tr>
-					   	   <td><input type="text" name="a1" placeholder="Name"></td>
+					   	   <td>Name</td>
+						   <td><input type="text" placeholder="Name"/></td>
+					   	   <td>Age</td>
+						   <td><input type="number" placeholder="Age"/></td>
+					       <td>Food</td>
+						   <td><select><option>Veg</option><option>Non Veg</option></select> </td>
+					   	   <td>Sex</td>
+						   <td><select><option>Female</option><option>Male</option><option>Others</option></select></td>
+					   	   
 					   </tr>
 					   <tr>
-					   	   <td><input type="email" name="a3" placeholder="Email" /></td>
+					   	   <td>Name</td>
+						   <td><input type="text" placeholder="Name"/></td>
+					   	   <td>Age</td>
+						   <td><input type="number" placeholder="Age"/></td>
+					       <td>Food</td>
+						   <td><select><option>Veg</option><option>Non Veg</option></select> </td>
+					   	   <td>Sex</td>
+						   <td><select><option>Female</option><option>Male</option><option>Others</option></select></td>
+					   	   
+						   
 					   </tr>
 					   <tr>
-					   	   <td><input type="text" name="a5" placeholder="Username" /></td>
+					   	   <td>Name</td>
+						   <td><input type="text" placeholder="Name"/></td>
+					   	   <td>Age</td>
+						   <td><input type="number" placeholder="Age"/></td>
+					       <td>Food</td>
+						   <td><select><option>Veg</option><option>Non Veg</option></select> </td>
+					   	   <td>Sex</td>
+						   <td><select><option>Female</option><option>Male</option><option>Others</option></select></td>
+					   	   
 					   </tr>
 					   <tr>
-					   	   <td><input type="password" name="a6" placeholder="Password" /></td>
+					   	   <td>Name</td>
+						   <td><input type="text" placeholder="Name"/></td>
+					   	   <td>Age</td>
+						   <td><input type="number" placeholder="Age"/></td>
+					       <td>Food</td>
+						   <td><select><option>Veg</option><option>Non Veg</option></select> </td>
+					   	   <td>Sex</td>
+						   <td><select><option>Female</option><option>Male</option><option>Others</option></select></td>
+					   	  
 					   </tr>
 					   <tr>
-					   	   <td><input type="number" name="a2" placeholder="Phone Number" /></td>
+					   <td></td>
+					   <td><button>Submit</button><input type="reset" /></td>
 					   </tr>
-					   <tr>   
-						   <td><button>Submit</button><input type="reset" /></td>
-					   </tr>
+					   
+					   
+					   
 				</table>
 				
 				</form>
@@ -85,7 +125,7 @@ function myFunction() {
 		</div>
 		<footer>
 			<ul>
-				<li><a onclick="myFunction()">Click to Contact Us</a></li>
+				<li><a onclick="myFunction()">Click for Contact Us</a></li>
 			</ul>
 			<p>&copy;Shubham Srivastava</p>
 		</footer>
