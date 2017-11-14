@@ -138,7 +138,7 @@ function hideB()
 						   
 					   </tr>
 
-					   <tr style="position: absolute;visibility:hidden;margin-top:-250px;margin-left:300px;" id="B"><td>Return Date</td>
+					   <tr style="position: absolute;visibility:hidden;margin-top:-220px;margin-left:300px;" id="B"><td>Return Date</td>
 					   	<td><input type="date" id="d2" name="d2"></td>
 					   </tr>
 
