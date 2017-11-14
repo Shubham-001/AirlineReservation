@@ -79,7 +79,7 @@ function myFunction() {
 					   	   <td><input type="number" name="a5" placeholder="Phone Number" /></td>
 					   </tr>
 					   <tr>   
-						   <td><input type="submit" value="submit" name="xxx"><input type="reset" /></td>
+						   <td><input type="submit" value="Submit" name="xxx"><input type="reset" /></td>
 					   </tr>
 				</table>
 				</form>
